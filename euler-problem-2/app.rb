@@ -32,7 +32,13 @@ def evens
         end
     end
     puts @even
-end                
+    add_array
+end
+
+def add_array
+    @even = @even.inject(0){|sum,x| sum + x }
+    puts @even
+end  
 
 fibonacci(4000000)
 
