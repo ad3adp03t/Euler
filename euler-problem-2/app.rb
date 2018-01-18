@@ -4,27 +4,37 @@
 # 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
 
 # By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
-
 def fibonacci(num)
     x = 1
     y = 2
-    fib = [1,2]
+    @fib = [1,2]
     while x&&y<num
         if x+y<num
-            fib<<x+=y
+            @fib<<x+=y
         else
             break
         end
         if y+x<num       
-            fib<<y+=x
+            @fib<<y+=x
         else
             break
         end        
     end
-    puts fib
+    evens
 end
 
-fibonacci(10)
+def evens
+    even = Array.new
+    @fib.each do |x|
+        if x %2 == 0
+            even<<x
+        else
+        end
+    end
+    puts even
+end                
+
+fibonacci(4000000)
 
 
 
