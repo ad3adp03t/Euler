@@ -24,14 +24,14 @@ def fibonacci(num)
 end
 
 def evens
-    even = Array.new
+    @even = Array.new
     @fib.each do |x|
         if x %2 == 0
             even<<x
         else
         end
     end
-    puts even
+    puts @even
 end                
 
 fibonacci(4000000)
