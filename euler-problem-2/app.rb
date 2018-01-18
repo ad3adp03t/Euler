@@ -27,7 +27,7 @@ def evens
     @even = Array.new
     @fib.each do |x|
         if x %2 == 0
-            even<<x
+            @even<<x
         else
         end
     end
