@@ -20,4 +20,4 @@ def add_multiples
     puts @mult_3and5
 end    
 
-multiple3and5(10)
+multiple3and5(1000)
