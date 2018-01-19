@@ -11,6 +11,6 @@ def prime_factors(num)
     p largest_factor
 end    
 
-prime_factors(131956)
+prime_factors(600851475143)
         
         
