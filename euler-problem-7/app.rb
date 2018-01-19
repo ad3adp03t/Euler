@@ -10,4 +10,4 @@ def prime_generator(num)
     p primes
 end
 
-prime_generator(20)
+prime_generator(10001)
