@@ -24,7 +24,7 @@ def triangle_divisors(div)
     triangle = 3
     count = 3
     loop do
-        factors = (1..triangle).select { |n|triangle % n == 0}
+        factors = factors_of(triangle)
         if factors.length > div
             puts triangle
             break
