@@ -15,12 +15,16 @@
 # We can see that 28 is the first triangle number to have over five divisors.
 
 # What is the value of the first triangle number to have over five hundred divisors?
-require_relative "factors.rb"
+# require_relative "factors.rb"
+def factors_of(num)
+(1..num).select { |n|num % n == 0}
+end
+
 def triangle_divisors
     triangle = 1
     count = 2
     loop do
-        factors = triangle.factors
+        factors = (1..triangle).select { |n|triangle % n == 0}
         if factors.length == 500
             puts triangle
             break
@@ -35,4 +39,6 @@ end
 triangle_divisors    
 
 
+
+# p factors_of(10)
 
