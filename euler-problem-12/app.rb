@@ -36,7 +36,7 @@ def triangle_divisors(div)
 end    
    
     
-triangle_divisors(3)    
+triangle_divisors(100)    
 
 
 
