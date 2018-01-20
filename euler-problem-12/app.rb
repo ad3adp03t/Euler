@@ -20,12 +20,12 @@ def factors_of(num)
 (1..num).select { |n|num % n == 0}
 end
 
-def triangle_divisors
-    triangle = 1
-    count = 2
+def triangle_divisors(div)
+    triangle = 3
+    count = 3
     loop do
         factors = (1..triangle).select { |n|triangle % n == 0}
-        if factors.length == 500
+        if factors.length == div
             puts triangle
             break
         else  
