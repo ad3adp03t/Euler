@@ -17,7 +17,7 @@
 # What is the value of the first triangle number to have over five hundred divisors?
 # require_relative "factors.rb"
 def factors_of(num)
-(1..num).select { |n|num % n == 0}
+    (1..num).select { |n|num % n == 0}
 end
 
 def triangle_divisors(div)
