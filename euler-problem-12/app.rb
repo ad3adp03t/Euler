@@ -15,3 +15,28 @@
 # We can see that 28 is the first triangle number to have over five divisors.
 
 # What is the value of the first triangle number to have over five hundred divisors?
+class Integer
+    def factors
+        1.upto(Math.sqrt(self)).select {|i| (self % i).zero?}.inject([]) do |f, i| 
+        f << i
+        f << self / i unless i == self / i
+        f
+    end.sort
+end
+    def triangle_divisors
+        triangle = 1
+        count = 2
+        loop do
+            factors = triangle.factors
+            if factors.length == 500
+                puts triangle
+                break
+            else  
+                triangle+=count
+                count+=1  
+            end
+        end
+    end        
+
+
+
