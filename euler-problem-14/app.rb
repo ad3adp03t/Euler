@@ -11,3 +11,22 @@
 # Which starting number, under one million, produces the longest chain?
 
 # NOTE: Once the chain starts the terms are allowed to go above one million.
+
+
+def collatz_parser
+	starting_number=13
+	n=starting_number
+	loop do
+		puts n
+		if n == 1
+			break
+		elsif n%2 == 0
+			n = n/2
+		else  
+			n = n*3+1
+		end	
+	end
+end
+
+collatz_parser	
+
