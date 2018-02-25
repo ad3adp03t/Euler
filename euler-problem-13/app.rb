@@ -103,13 +103,22 @@
 53503534226472524250874054075591789781264330331690]
 
 def add_array
+    first_10 = Array.new
     result=@source.inject(0){|sum,x| sum + x }
-    extraneous = Array.new
-    loop.do 
-        if extraneous.count >40
-            extraneous<<result.pop
+    result=result.to_s
+    result=result.chars
+    x=0
+    loop do
+        if x <= 9
+            first_10<<result[x]
+            x+=1
         else
             break
         end
-    puts result            
+    end
+    p first_10
+           
+               
 end 
+
+add_array

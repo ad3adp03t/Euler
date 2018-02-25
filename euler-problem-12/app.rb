@@ -21,8 +21,7 @@ def factors_of(num)
 end
 
 def triangle_divisors(div)
-    triangle = 3
-    count = 3
+    triangle,count = 3,3
     loop do
         factors = factors_of(triangle)
         if factors.length > div
@@ -33,10 +32,12 @@ def triangle_divisors(div)
             count+=1  
         end
     end
-end    
+end
+
+    
    
     
-triangle_divisors(500)    
+triangle_divisors(170)    
 
 
 
